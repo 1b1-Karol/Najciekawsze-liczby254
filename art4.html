@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8" />
+	<title>Najciekawsze liczby</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/art.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+	<link rel="icon" href="img/math-icon.png" sizes="64x64" />
+	<script src="script.js"></script>
+</head>
+<body>
+
+<script>
+	
+function t(x)
+{
+	var k = parseInt(x.value);
+	if(Number.isInteger(k) && isPrime(k))
+	{
+		var b = Math.pow(2,k)-1;
+		document.getElementById('iresu').innerHTML = b;
+	}
+	else
+		document.getElementById('iresu').innerHTML = 'brak prawidłowych danych';
+}
+
+function isPrime(num) {
+
+	if (num == 2) {return true;}
+	else if (num > 1)
+	{
+		for (var i = 2; i < num; i++)
+		{
+			if (num % i == 0)
+				{return false;}
+		}
+	}
+	return true;
+}
+	
+</script>
+
+<div id="top">
+	<div id="page-name">
+		<a href="index.html">Najciekawsze liczby</a>
+	</div>
+	<div style="display: inline-block">
+	<ol id="top-list">
+		<li><a href="index.html">⭐ Strona Główna</a></li>
+		<li><a href="articles.html">📰 Artykuły</a></li>
+		<li><a href="me.html">🙋‍♂️ O autorze</a></li>
+	</ol>
+	</div>
+	<div style="clear:both"></div>
+</div>
+<div id="content">
+
+	<h1>Liczby Mersenne'a</h1>
+	
+	<p>
+	Liczby, w postaci <em>2<sup>p</sup>-1</em>, gdzie <em>p</em> jest <a href="art1.html">liczbą pierwszą</a> nazywają się <str>liczbami Mersenne'a</str>. Przyjmując <em>p</em> = 2;3;5;7 otrzymujemy liczby Mersenne'a pierwsze, natomiast <em>2<sup>11</sup>-1 = 2047 = 23&#xD7;89.</em>
+	</p>
+	
+	<p>
+	Nie wiadomo, czy wśród liczb Mersenne'a jest nieskończenie wiele liczb pierwszych lub czy wśród tych liczb jest nieskończenie wiele liczb złożonych. Liczby Mersenne'a zasługują na szczególną uwagę, ponieważ wśród nich możliwe jest wskazanie największych znanych liczb pierwszych. Największą znaną dotychczas liczbą Mersenne'a pierwszą, jednocześnie największą liczbą pierwszą jest <em>2<sup>82589933</sup>-1</em>.
+	</p>
+	
+	<p class="formu">
+	m(<input type="number" class="iformu" oninput="t(this)" />) = <span id="iresu"></span>
+	</p>
+	
+	<src>Źródła:
+	<ul>
+		<a href="https://en.wikipedia.org/wiki/Mersenne_prime" target="_blank"><li>Wikipedia, Free Encyclopedia</li></a>
+		<li>Wiedza własna</li>
+	</ul>
+	</src>
+
+</div>
+<div id="bottom">
+	Autor: Karol Głębocki &#169;2021
+</div>
+</body>
+</html>

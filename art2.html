@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8" />
+	<title>Najciekawsze liczby</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/art.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+	<link rel="icon" href="img/math-icon.png" sizes="64x64" />
+	<script src="script.js"></script>
+</head>
+<body>
+
+<script>
+	
+function t(x)
+{
+	var k = parseInt(x.value);
+	if(Number.isInteger(k) && isPrime(k))
+	{
+		var b = Math.pow(2, k-1)*(Math.pow(2, k)-1);
+		document.getElementById('iresu').innerHTML = b;
+	}
+	else
+		document.getElementById('iresu').innerHTML = 'brak prawidłowych danych';
+}
+
+function isPrime(num) {
+
+	if (num == 2) {return true;}
+	else if (num > 1)
+	{
+		for (var i = 2; i < num; i++)
+		{
+			if (num % i == 0)
+				{return false;}
+		}
+	}
+	return true;
+}
+	
+</script>
+
+<div id="top">
+	<div id="page-name">
+		<a href="index.html">Najciekawsze liczby</a>
+	</div>
+	<div style="display: inline-block">
+	<ol id="top-list">
+		<li><a href="index.html">⭐ Strona Główna</a></li>
+		<li><a href="articles.html">📰 Artykuły</a></li>
+		<li><a href="me.html">🙋‍♂️ O autorze</a></li>
+	</ol>
+	</div>
+	<div style="clear:both"></div>
+</div>
+<div id="content">
+
+	<h1>Liczby Doskonałe</h1>
+	
+	<p>
+	<str>Liczbą doskonałą</str> jest nazywana liczba naturalna, której suma wszystkich dzielników (pomijając ją samą) jest równa właśnie tej liczbie. Przykładami takich liczbą są liczby:
+	<table>
+		<tr>
+			<td>D(6)={1;2;3;<span style="text-decoration: line-through">6</span>}</td>
+			<td>1+2+3=6</td>
+		</tr>
+		<tr>
+			<td>D(28)={1;2;4;7;14;<span style="text-decoration: line-through">28</span>}</td>
+			<td>1+2+4+7+14=28</td>
+		</tr>
+		<tr>
+			<td>D(496)={1;2;4;8;16;31;62;124;248;<span style="text-decoration: line-through">496</span>}</td>
+			<td>1+2+4+8+16+31+62+124+248=496</td>
+		</tr>
+		<tr>
+			<td>D(8128)={1;2;4;8;16;32;64;127;254;508;1016;2032;4064;<span style="text-decoration: line-through">8128</span>}</td>
+			<td>1+2+4+8+16+32+64+127+254+508+1016+2032+4064=8128</td>
+		</tr>
+		<tr>
+			<td style="font-weight:bold">.....</td>
+			<td style="font-weight:bold">.....</td>
+		</tr>
+			
+		</tr>
+	</table>
+	</p>
+	
+	<p>
+	<a href="https://en.wikipedia.org/wiki/List_of_perfect_numbers" target="_blank">Jak narazie znaleziono zaledwie 51 liczb doskonałych.</a> Starożytni Grecy przypisywali liczbie 6 szczególne znaczenie. Wcześni komentatorzy Biblii upatrywali doskonałości liczb 6 i 28 specjalnego sensu. Bo czyż nie w 6 dni został stworzony świat i czy Księżyc nie obiega Ziemi w czasie 28 nocy? Wiele wymiarów w świątyni Salomona nawiązuje do liczby sześć. Żyjący na przełomie I i II wieku Mikomachos, autor "Arytmetyki", uważał, że obiekty doskonałe i piękne zawsze są rzadkie, toteż nie należy się spodziewać, że liczb doskonałych będzie dużo.
+	</p>
+	
+	<p>
+	Euklides w IV wieku pne zauważył, że liczby wychodzące z funkcji <em>f(p)=2<sup>p-1</sup>(2<sup>p</sup>-1)</em>, gdzie <em>p</em> należy do <a href="art1.html">liczb pierwszych</a>, są liczbami doskonałymi.
+	</p>
+	
+	<p class="formu">
+	f(<input type="number" class="iformu" oninput="t(this)" />) = <span id="iresu"></span>
+	</p>
+	
+	<src>Źródła:
+	<ul>
+		<a href="https://en.wikipedia.org/wiki/Perfect_number" target="_blank"><li>Wikipedia, Free Encyclopedia</li></a>
+		<li>Wiedza własna</li>
+	</ul>
+	</src>
+
+
+</div>
+<div id="bottom">
+	Autor: Karol Głębocki &#169;2021
+</div>
+</body>
+</html>

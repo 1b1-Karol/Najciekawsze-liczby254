@@ -30,6 +30,7 @@
 {
 	color: #eee;
 	position: relative;
+	overflow: hidden;
 }
 
 .ba

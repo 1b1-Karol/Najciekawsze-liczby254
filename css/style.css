@@ -14,12 +14,12 @@ body
 	font-size: 1.3em;
 	position: fixed;
 	top: 0; left: 0;
-	z-index:1000;
+	z-index: 1000;
 }
 
 #page-name
 {
-	float: left;
+	display: inline-block;
 	margin: .3em 0 auto 15px;
 	font-size: 1.2em;
 	font-family: "Audiowide", sans-serif;
@@ -28,8 +28,8 @@ body
 #top-list
 {
 	list-style-type: none;
-	width: 500px;
-	margin: 10px auto 10px;
+	width: 550px;
+	margin: 10px 0 10px 40%;
 	padding: 0;
 }
 
@@ -62,7 +62,7 @@ a:hover
 	width: 70%;
 	margin: 0 15% 0;
 	background-color: #ddd;
-	padding: 7em 3em 2em;
+	padding: 7em 3em 6em;
 	color: #000;
 }
 
@@ -72,4 +72,7 @@ a:hover
 	text-align: center;
 	padding: .75em 0 .8em;
 	font-size: 1.2em;
+	position: fixed;
+	transition: bottom .1s; left: 0;
+	width: 100%;
 }

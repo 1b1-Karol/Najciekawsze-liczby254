@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8" />
+	<title>Najciekawsze liczby</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/art.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+	<link rel="icon" href="img/math-icon.png" sizes="64x64" />
+	<script src="script.js"></script>
+</head>
+<body>
+
+<script>
+	
+function t(x)
+{
+	var k = parseInt(x.value);
+	if(Number.isInteger(k) && k>0)
+	{
+		var b = (k*(k+1))/2;
+		document.getElementById('iresu').innerHTML = b;
+	}
+	else
+		document.getElementById('iresu').innerHTML = 'brak prawidłowych danych';
+}
+	
+</script>
+
+<div id="top">
+	<div id="page-name">
+		<a href="index.html">Najciekawsze liczby</a>
+	</div>
+	<div style="display: inline-block">
+	<ol id="top-list">
+		<li><a href="index.html">⭐ Strona Główna</a></li>
+		<li><a href="articles.html">📰 Artykuły</a></li>
+		<li><a href="me.html">🙋‍♂️ O autorze</a></li>
+	</ol>
+	</div>
+	<div style="clear:both"></div>
+</div>
+<div id="content">
+
+	<div class="tright">
+		<div class="thumb" width="222px">
+			<img src="img/triangle-numbers.png" width="220px" height="185px" class="thumbimg"/>
+			<div class="thumbcaption" style="width: 220px">Pierwsze sześć liczb trójkątnych</div>
+		</div>
+	</div>
+
+	<h1>Liczby Trójkątne</h1>
+	
+	<p>
+	<str>Liczby trójkątne</str> są typowane ze wzoru <em>t(k) = <frac><span>k(k+1)</span><span class="bottom">2</span></frac></em>, gdzie <em>k</em>&#x2208;<em>N</em>. Można je utworzyć dodając do siebie kolejne dodatnie liczby naturalne: <em>t(k) = 1+2+3+...+k</em>
+	</p>
+	<p>
+	Nazwa liczby trójkątne pochodzi stąd, że <em>t<sub>k</sub></em> jest liczbą monet jednakowej wielkości, z których można utworzyć trójkąt równoboczny o boku zbudowanym z <em>k</em> monet.
+	</p>
+	
+	<p class="formu">
+	t(<input type="number" class="iformu" oninput="t(this)" />) = <span id="iresu"></span>
+	</p>
+	
+	<src>Źródła:
+	<ul>
+		<a href="https://en.wikipedia.org/wiki/Triangular_number" target="_blank"><li>Wikipedia, Free Encyclopedia</li></a>
+		<li>Wiedza własna</li>
+	</ul>
+	</src>
+
+</div>
+<div id="bottom">
+	Autor: Karol Głębocki &#169;2021
+</div>
+</body>
+</html>

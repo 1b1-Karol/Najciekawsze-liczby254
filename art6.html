@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="pl-PL">
+<head>
+	<meta charset="UTF-8" />
+	<title>Najciekawsze liczby</title>
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/art.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+	<link rel="icon" href="img/math-icon.png" sizes="64x64" />
+	<script src="script.js"></script>
+	<script>
+	
+function t(x)
+{
+	var k = parseInt(x.value);
+	if(Number.isInteger(k) && k>0)
+	{
+		document.getElementById('iresu').innerHTML = fib(k);
+	}
+	else
+		document.getElementById('iresu').innerHTML = 'brak prawidłowych danych';
+}
+
+function fib(num)
+{
+	var a = 1, b = 0, temp;
+	while (num >= 0)
+	{
+		temp = a;
+		a = a + b;
+		b = temp;
+		num--;
+	}
+
+	return b;
+}
+	
+	</script>
+</head>
+<body>
+
+<div id="top">
+	<div id="page-name">
+		<a href="index.html">Najciekawsze liczby</a>
+	</div>
+	<div style="display: inline-block">
+	<ol id="top-list">
+		<li><a href="index.html">⭐ Strona Główna</a></li>
+		<li><a href="articles.html">📰 Artykuły</a></li>
+		<li><a href="me.html">🙋‍♂️ O autorze</a></li>
+	</ol>
+	</div>
+	<div style="clear:both"></div>
+</div>
+<div id="content">
+
+	<div class="tright">
+		<div class="thumb" width="322px">
+			<img src="img/fibonnaci-numbers.png" width="320px" class="thumbimg"/>
+			<div class="thumbcaption" style="width: 320px">Kolejne liczby Fibonnaciego można określać rysując na kartce kwadraty, według wzoru na obrazku.</div>
+		</div>
+	</div>
+
+	<h1>Liczby (Ciąg) Fibonacciego</h1>
+	
+	<p>
+	Liczby naturalne tworzące ciąg o takiej własności, że kolejny wyraz (z wyjątkiem dwóch pierwszych) jest sumą dwóch poprzednich (1,1,2,3,5,8,13,...) to <str>liczby Fibonacciego</str>. Nazwa ta wzięła się od imienia Leonarda Fibonacciego, który w 1202 podał ten ciąg.
+	</p>
+	
+	<p>
+	Ciąg Fibonacciego jest ulubionym ciągiem przyrody. Opisuje on np. liczbę pędów rośliny jednostajnie przyrastającej w latach (np. drzewa). Róże kalafiora zielonego, poczynając od czubka układają się w kształt spiral. Jeśli obliczymy ilość lewo- i prawoskrętnych spiral, to okaże się, że są to liczby z ciągu Fibonacciego. Podobną ilość spiral tworzą łuski szyszki i ziarna słonecznika.
+	</p>
+	
+	<p class="formu">
+	&#x03C6;(<input type="number" class="iformu" oninput="t(this)" />) = <span id="iresu"></span>
+	</p>
+	
+	<src>Źródła:
+	<ul>
+		<a href="https://en.wikipedia.org/wiki/Fibonacci_number" target="_blank"><li>Wikipedia, Free Encyclopedia</li></a>
+		<li>Wiedza własna</li>
+	</ul>
+	</src>
+
+</div>
+<div id="bottom">
+	Autor: Karol Głębocki &#169;2021
+</div>
+</body>
+</html>

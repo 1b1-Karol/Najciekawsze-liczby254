@@ -1,0 +1,125 @@
+str
+{
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+src
+{
+	display: block;
+	font-size: 1em;
+	margin-top: 1.33em;
+	margin-left: 0;
+	margin-right: 0;
+	border-top: 3px solid #000;
+	padding-top: .3em;
+}
+
+#content a:link, #content a:visited, #content a:active
+{
+	text-decoration: underline;
+}
+
+#content a:hover
+{
+	opacity: .6;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #777;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #999;
+}
+tr:nth-child(odd) {
+  background-color: #ccc;
+}
+
+frac {
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    letter-spacing: 0.001em;
+    text-align: center;
+}
+frac > span {
+    display: block;
+    padding: .1em;
+	font-size: smaller;
+}
+frac > span.bottom {
+    border-top: thin solid black;
+}
+
+ul
+{
+	padding-left: 20px;
+	margin-block-start: .4em;
+}
+
+p
+{
+	font-size: 1.2em;
+}
+
+.tright
+{
+	clear: right;
+    float: right;
+	margin: 0.5em 0 1.3em 1.4em;
+	width: auto;
+    background-color: transparent;
+}
+
+.thumb
+{
+	border: 1px solid #c8ccd1;
+    padding: 3px;
+    background-color: #f8f9fa;
+    font-size: 94%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.thumbimg
+{
+	cursor: not-allowed;
+	background-color: #ffffff;
+    border: 1px solid #c8ccd1;
+}
+
+.thumbcaption
+{
+	border: 0;
+    line-height: 1.4em;
+    padding: 3px;
+    font-size: 94%;
+    text-align: left;
+}
+
+.formu
+{
+	font-size: 1.5em;
+}
+
+.iformu
+{
+	background-color: transparent;
+	width: 3em;
+	border: .5px dotted rgb(17, 17, 17, .5);
+	font-size: 1em;
+}
+
+.iformu:focus
+{
+	background-color: #fff;
+}
